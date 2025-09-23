@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - PSITECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>PSITECH</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="desempenho.html">Desempenho</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h1>Quiz de Banco de Dados</h1>
+                <p>Teste seus conhecimentos sobre bancos de dados relacionais</p>
+            </div>
+
+            <div class="quiz-nivel">
+                <h2>Selecione o nível:</h2>
+                <div class="nivel-botoes">
+                    <button class="btn-nivel active" onclick="selecionarNivel('facil')">Fácil</button>
+                    <button class="btn-nivel" onclick="selecionarNivel('dificil')">Difícil</button>
+                </div>
+            </div>
+
+            <div class="quiz-conteudo" id="quiz-facil">
+                <div class="pergunta">
+                    <h3>1. Qual linguagem é mais usada para consultar dados em um banco de dados relacional?</h3>
+                    <div class="alternativas">
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">a) HTML</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">b) SQL</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">c) CSS</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">d) Python</div>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <h3>2. O que significa a sigla SQL?</h3>
+                    <div class="alternativas">
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">a) Structured Query Language</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">b) Simple Question Language</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">c) System Query Level</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">d) Standard Quick Language</div>
+                    </div>
+                </div>
+
+                <button class="btn-proximo" onclick="enviarQuiz()">Enviar Respostas</button>
+            </div>
+
+            <div class="quiz-conteudo" id="quiz-dificil" style="display: none;">
+                <div class="pergunta">
+                    <h3>1. Qual comando SQL é usado para alterar dados já existentes em uma tabela?</h3>
+                    <div class="alternativas">
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">a) ALTER</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">b) UPDATE</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">c) CHANGE</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">d) MODIFY</div>
+                    </div>
+                </div>
+
+                <div class="pergunta">
+                    <h3>2. O que é uma chave primária (PRIMARY KEY)?</h3>
+                    <div class="alternativas">
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">a) Um campo que pode ter valores repetidos</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">b) Um campo que identifica unicamente cada registro</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">c) Um campo usado apenas para ordenar</div>
+                        <div class="alternativa" onclick="selecionarAlternativa(this)">d) Um campo que sempre aceita valores nulos</div>
+                    </div>
+                </div>
+
+                <button class="btn-proximo" onclick="enviarQuiz()">Enviar Respostas</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function selecionarNivel(nivel) {
+            document.querySelectorAll('.btn-nivel').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('quiz-facil').style.display = nivel === 'facil' ? 'block' : 'none';
+            document.getElementById('quiz-dificil').style.display = nivel === 'dificil' ? 'block' : 'none';
+        }
+
+        function selecionarAlternativa(elemento) {
+            const alternativas = elemento.parentElement.querySelectorAll('.alternativa');
+            alternativas.forEach(alt => alt.classList.remove('selected'));
+            elemento.classList.add('selected');
+        }
+
+        function enviarQuiz() {
+            alert('Quiz enviado com sucesso! Redirecionando para o desempenho...');
+            window.location.href = 'desempenho.html';
+        }
+    </script>
+</body>
+</html>

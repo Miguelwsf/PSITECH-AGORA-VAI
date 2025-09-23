@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSITECH - Cursos de Tecnologia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>PSITECH</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="desempenho.html">Desempenho</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Domine as Tecnologias mais Demandadas do Mercado</h1>
+                <p>Cursos completos de Python, Java, Banco de Dados e muito mais. Aprenda com especialistas e acelere sua carreira em TI.</p>
+                <button class="cta-button" onclick="window.location.href='cursos.html'">Explorar Cursos</button>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+        </section>
+
+        <section class="cursos-destaque">
+            <h2>Cursos em Destaque</h2>
+            <div class="cursos-grid">
+                <div class="curso-card">
+                    <div class="curso-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Completo</h3>
+                    <p>Do básico ao avançado, incluindo Django, Flask e análise de dados.</p>
+                    <div class="curso-info">
+                        <span><i class="fas fa-clock"></i> 60 horas</span>
+                        <span><i class="fas fa-signal"></i> Iniciante ao Avançado</span>
+                    </div>
+                    <button class="btn-ver-curso" onclick="window.location.href='detalhes-curso.html?curso=python'">Ver Curso</button>
+                </div>
+
+                <div class="curso-card">
+                    <div class="curso-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java Developer</h3>
+                    <p>Desenvolvimento Java com Spring Boot, Hibernate e microsserviços.</p>
+                    <div class="curso-info">
+                        <span><i class="fas fa-clock"></i> 80 horas</span>
+                        <span><i class="fas fa-signal"></i> Intermediário ao Avançado</span>
+                    </div>
+                    <button class="btn-ver-curso" onclick="window.location.href='detalhes-curso.html?curso=java'">Ver Curso</button>
+                </div>
+
+                <div class="curso-card">
+                    <div class="curso-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Banco de Dados SQL</h3>
+                    <p>Modelagem, SQL avançado, MySQL, PostgreSQL e otimização.</p>
+                    <div class="curso-info">
+                        <span><i class="fas fa-clock"></i> 45 horas</span>
+                        <span><i class="fas fa-signal"></i> Todos os níveis</span>
+                    </div>
+                    <button class="btn-ver-curso" onclick="window.location.href='detalhes-curso.html?curso=banco-dados'">Ver Curso</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="login-section">
+            <div class="login-card">
+                <h3>Já é aluno?</h3>
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="Sua senha">
+                    </div>
+                    <button type="button" class="btn-login" onclick="window.location.href='desempenho.html'">Entrar</button>
+                </form>
+                <p class="cadastro-link">É novo? <a href="login.html">Cadastre-se aqui</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

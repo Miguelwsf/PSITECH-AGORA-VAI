@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - TechCourses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>TechCourses</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="desempenho.html">Desempenho</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <div class="pagamento-container">
+            <h1>Finalizar Compra</h1>
+            
+            <div class="resumo-compra">
+                <h3>Resumo do Pedido</h3>
+                <div class="curso-compra">
+                    <h4>Banco de Dados SQL do Básico ao Avançado</h4>
+                    <p>45 horas de conteúdo • Acesso vitalício</p>
+                    <div class="preco">R$ 297,00</div>
+                </div>
+                <div class="total">
+                    <strong>Total: R$ 297,00</strong>
+                </div>
+            </div>
+
+            <div class="forma-pagamento">
+                <h3>Forma de Pagamento</h3>
+                
+                <div class="opcoes-pagamento">
+                    <div class="opcao-pagamento" data-pagamento="cartao">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Cartão de Crédito</span>
+                        <input type="radio" name="pagamento" value="cartao" checked>
+                    </div>
+                    
+                    <div class="opcao-pagamento" data-pagamento="pix">
+                        <i class="fas fa-qrcode"></i>
+                        <span>PIX</span>
+                        <input type="radio" name="pagamento" value="pix">
+                    </div>
+                    
+                    <div class="opcao-pagamento" data-pagamento="boleto">
+                        <i class="fas fa-barcode"></i>
+                        <span>Boleto</span>
+                        <input type="radio" name="pagamento" value="boleto">
+                    </div>
+                </div>
+
+                <div class="dados-cartao active">
+                    <h4>Dados do Cartão</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="numero-cartao">Número do Cartão</label>
+                            <input type="text" id="numero-cartao" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nome-cartao">Nome no Cartão</label>
+                            <input type="text" id="nome-cartao" placeholder="Como está no cartão">
+                        </div>
+                        
+                        <div class="grupo-campos">
+                            <div class="form-group">
+                                <label for="validade">Validade</label>
+                                <input type="text" id="validade" placeholder="MM/AA" maxlength="5">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="parcelas">Parcelas</label>
+                            <select id="parcelas">
+                                <option value="1">1x de R$ 297,00</option>
+                                <option value="2">2x de R$ 148,50</option>
+                                <option value="3">3x de R$ 99,00</option>
+                                <option value="4">4x de R$ 74,25</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="dados-pix" style="display: none;">
+                    <h4>Pagamento via PIX</h4>
+                    <p>Escaneie o QR Code abaixo ou copie o código para pagamento:</p>
+                    <div class="qrcode-placeholder">
+                        <i class="fas fa-qrcode"></i>
+                        <p>QR Code será gerado após confirmação</p>
+                    </div>
+                </div>
+
+                <div class="dados-boleto" style="display: none;">
+                    <h4>Pagamento via Boleto</h4>
+                    <p>O boleto será gerado após a confirmação do pedido e terá validade de 3 dias.</p>
+                </div>
+            </div>
+
+            <div class="dados-pessoais">
+                <h3>Dados Pessoais</h3>
+                <form>
+                    <div class="grupo-campos">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" placeholder="Seu nome completo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" placeholder="000.000.000-00">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" placeholder="(11) 99999-9999">
+                    </div>
+                </form>
+            </div>
+
+            <button class="btn-finalizar">Finalizar Compra</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechCourses. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

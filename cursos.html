@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Cursos - PSITECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>PSITECH</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html" class="active">Cursos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="desempenho.html">Desempenho</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <h1>Todos os Cursos</h1>
+        <p class="page-description">Escolha o curso ideal para sua carreira em tecnologia</p>
+        
+        <div class="cursos-completo">
+            <div class="curso-item">
+                <div class="curso-header">
+                    <div class="curso-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="curso-info">
+                        <h3>Python Completo</h3>
+                        <p>Do básico ao avançado, incluindo Django, Flask e análise de dados</p>
+                        <div class="curso-meta">
+                            <span><i class="fas fa-clock"></i> 60 horas</span>
+                            <span><i class="fas fa-signal"></i> Iniciante ao Avançado</span>
+                            <span><i class="fas fa-users"></i> 2.145 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-ver-detalhes" onclick="window.location.href='detalhes-curso.html?curso=python'">Ver Detalhes do Curso</button>
+            </div>
+
+            <div class="curso-item">
+                <div class="curso-header">
+                    <div class="curso-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="curso-info">
+                        <h3>Java Developer</h3>
+                        <p>Desenvolvimento Java com Spring Boot, Hibernate e microsserviços</p>
+                        <div class="curso-meta">
+                            <span><i class="fas fa-clock"></i> 80 horas</span>
+                            <span><i class="fas fa-signal"></i> Intermediário ao Avançado</span>
+                            <span><i class="fas fa-users"></i> 1.876 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-ver-detalhes" onclick="window.location.href='detalhes-curso.html?curso=java'">Ver Detalhes do Curso</button>
+            </div>
+
+            <div class="curso-item">
+                <div class="curso-header">
+                    <div class="curso-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="curso-info">
+                        <h3>Banco de Dados SQL</h3>
+                        <p>Modelagem, SQL avançado, MySQL, PostgreSQL e otimização</p>
+                        <div class="curso-meta">
+                            <span><i class="fas fa-clock"></i> 45 horas</span>
+                            <span><i class="fas fa-signal"></i> Todos os níveis</span>
+                            <span><i class="fas fa-users"></i> 1.543 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-ver-detalhes" onclick="window.location.href='detalhes-curso.html?curso=banco-dados'">Ver Detalhes do Curso</button>
+            </div>
+
+            <div class="curso-item">
+                <div class="curso-header">
+                    <div class="curso-icon">
+                        <i class="fas fa-c"></i>
+                    </div>
+                    <div class="curso-info">
+                        <h3>Linguagem C</h3>
+                        <p>Programação em C desde os fundamentos até tópicos avançados</p>
+                        <div class="curso-meta">
+                            <span><i class="fas fa-clock"></i> 50 horas</span>
+                            <span><i class="fas fa-signal"></i> Iniciante ao Intermediário</span>
+                            <span><i class="fas fa-users"></i> 987 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-ver-detalhes" onclick="window.location.href='detalhes-curso.html?curso=c'">Ver Detalhes do Curso</button>
+            </div>
+
+            <div class="curso-item">
+                <div class="curso-header">
+                    <div class="curso-icon">
+                        <i class="fab fa-cuttlefish"></i>
+                    </div>
+                    <div class="curso-info">
+                        <h3>C++ Moderno</h3>
+                        <p>Programação orientada a objetos e recursos modernos do C++</p>
+                        <div class="curso-meta">
+                            <span><i class="fas fa-clock"></i> 70 horas</span>
+                            <span><i class="fas fa-signal"></i> Intermediário ao Avançado</span>
+                            <span><i class="fas fa-users"></i> 1.234 alunos</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-ver-detalhes" onclick="window.location.href='detalhes-curso.html?curso=cpp'">Ver Detalhes do Curso</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

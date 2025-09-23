@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho - TechCourses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>TechCourses</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="desempenho.html" class="active">Desempenho</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <div class="desempenho-container">
+            <h1>Meu Desempenho</h1>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Cursos Iniciados</h3>
+                    <p class="stat-number">3</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Cursos Concluídos</h3>
+                    <p class="stat-number">1</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horas Estudadas</h3>
+                    <p class="stat-number">42h</p>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Pontuação Total</h3>
+                    <p class="stat-number">850</p>
+                </div>
+            </div>
+
+            <div class="progresso-cursos">
+                <h2>Progresso nos Cursos</h2>
+                
+                <div class="curso-progresso">
+                    <div class="curso-info">
+                        <span>Python Completo</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="barra-progresso">
+                        <div class="progresso" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="curso-progresso">
+                    <div class="curso-info">
+                        <span>Banco de Dados SQL</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="barra-progresso">
+                        <div class="progresso" style="width: 100%"></div>
+                    </div>
+                </div>
+                
+                <div class="curso-progresso">
+                    <div class="curso-info">
+                        <span>Java Developer</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="barra-progresso">
+                        <div class="progresso" style="width: 30%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-resultados">
+                <h2>Resultados dos Quizzes</h2>
+                <div class="resultados-grid">
+                    <div class="resultado-card">
+                        <h4>Quiz Banco de Dados - Fácil</h4>
+                        <p>Nota: 90%</p>
+                        <span>Concluído em: 15/03/2024</span>
+                    </div>
+                    
+                    <div class="resultado-card">
+                        <h4>Quiz Python - Básico</h4>
+                        <p>Nota: 85%</p>
+                        <span>Concluído em: 10/03/2024</span>
+                    </div>
+                    
+                    <div class="resultado-card">
+                        <h4>Quiz Java - Introdução</h4>
+                        <p>Nota: 78%</p>
+                        <span>Concluído em: 05/03/2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechCourses. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
