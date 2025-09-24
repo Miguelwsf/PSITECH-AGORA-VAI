@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - PSITECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>PSITECH</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="meus-cursos.html">Meus Cursos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="desempenho.html">Desempenho</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-container">
+        <div class="aula-container">
+            <!-- Sidebar com módulos -->
+            <div class="aula-sidebar">
+                <h3>Conteúdo do Curso</h3>
+                <div class="modulos-lista">
+                    <div class="modulo">
+                        <h4 onclick="toggleModulo(this)">Módulo 1: Introdução ao Python <i class="fas fa-chevron-down"></i></h4>
+                        <div class="aulas-lista">
+                            <div class="aula-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Aula 1: Instalação do Python</span>
+                                <span>15 min</span>
+                            </div>
+                            <div class="aula-item completed">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Aula 2: Primeiro Programa</span>
+                                <span>20 min</span>
+                            </div>
+                            <div class="aula-item active">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Aula 3: Variáveis e Tipos de Dados</span>
+                                <span>25 min</span>
+                            </div>
+                            <div class="aula-item">
+                                <i class="fas fa-lock"></i>
+                                <span>Aula 4: Estruturas Condicionais</span>
+                                <span>30 min</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modulo">
+                        <h4 onclick="toggleModulo(this)">Módulo 2: Programação Orientada a Objetos <i class="fas fa-chevron-down"></i></h4>
+                        <div class="aulas-lista" style="display: none;">
+                            <div class="aula-item locked">
+                                <i class="fas fa-lock"></i>
+                                <span>Aula 5: Classes e Objetos</span>
+                                <span>35 min</span>
+                            </div>
+                            <div class="aula-item locked">
+                                <i class="fas fa-lock"></i>
+                                <span>Aula 6: Herança e Polimorfismo</span>
+                                <span>40 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo principal da aula -->
+            <div class="aula-conteudo">
+                <div class="aula-header">
+                    <h1>Variáveis e Tipos de Dados em Python</h1>
+                    <div class="aula-info">
+                        <span><i class="fas fa-clock"></i> 25 minutos</span>
+                        <span><i class="fas fa-play-circle"></i> Aula 3</span>
+                        <span><i class="fas fa-book"></i> Módulo 1</span>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>Player de Vídeo - Variáveis e Tipos de Dados</p>
+                    </div>
+                </div>
+
+                <div class="aula-material">
+                    <h3>Material de Apoio</h3>
+                    <div class="material-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Slides da Aula - Variáveis e Tipos de Dados.pdf</span>
+                        <button class="btn-download">Download</button>
+                    </div>
+                    <div class="material-item">
+                        <i class="fas fa-code"></i>
+                        <span>Exemplos de Código - aula3.py</span>
+                        <button class="btn-download">Download</button>
+                    </div>
+                </div>
+
+                <div class="aula-navegacao">
+                    <button class="btn-anterior" onclick="window.location.href='aula.html?curso=python&aula=2'">
+                        <i class="fas fa-arrow-left"></i> Aula Anterior
+                    </button>
+                    <button class="btn-proxima" onclick="marcarConcluida()">
+                        Marcar como Concluída <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+               
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleModulo(element) {
+            const aulasLista = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (aulasLista.style.display === 'none') {
+                aulasLista.style.display = 'block';
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                aulasLista.style.display = 'none';
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        function marcarConcluida() {
+            const aulaAtual = document.querySelector('.aula-item.active');
+            if (aulaAtual) {
+                aulaAtual.classList.remove('active');
+                aulaAtual.classList.add('completed');
+                aulaAtual.querySelector('i').className = 'fas fa-check-circle';
+                
+                alert('Aula concluída com sucesso! Progresso salvo.');
+                
+                // Simular avanço para próxima aula
+                const proximaAula = aulaAtual.nextElementSibling;
+                if (proximaAula && proximaAula.classList.contains('aula-item')) {
+                    proximaAula.classList.remove('locked');
+                    proximaAula.classList.add('active');
+                    proximaAula.querySelector('i').className = 'fas fa-play-circle';
+                }
+            }
+        }
+
+        // Carregar informações da aula baseado na URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const aulaId = urlParams.get('aula');
+            const curso = urlParams.get('curso');
+            
+            // Aqui você pode carregar conteúdo específico baseado nos parâmetros
+            if (curso) {
+                document.querySelector('.aula-header h1').textContent += ` - ${curso.charAt(0).toUpperCase() + curso.slice(1)}`;
+            }
+        });
+    </script>
+</body>
+</html>

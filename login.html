@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - TechCourses</title>
+    <title>Login - PSITECH</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,7 +11,7 @@
     <header>
         <div class="logo">
             <i class="fas fa-laptop-code"></i>
-            <span>TechCourses</span>
+            <span>PSITECH</span>
         </div>
         <nav>
             <ul>
@@ -19,6 +19,7 @@
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="desempenho.html">Desempenho</a></li>
+                <li><a href="meus-cursos.html">Meus Cursos</a></li>
                 <li><a href="login.html" class="login-btn active">Login</a></li>
             </ul>
         </nav>
@@ -28,8 +29,8 @@
         <div class="login-fullpage">
             <div class="login-content">
                 <div class="login-welcome">
-                    <h1>Bem-vindo de volta!</h1>
-                    <p>Continue sua jornada de aprendizado em TI</p>
+                    <h1>Bem-vindo de volta ao PSITECH!</h1>
+                    <p>Continue sua jornada de aprendizado em tecnologia</p>
                     <div class="beneficios">
                         <div class="beneficio">
                             <i class="fas fa-play-circle"></i>
@@ -65,7 +66,7 @@
                                 </label>
                                 <a href="#" class="esqueci-senha">Esqueci a senha</a>
                             </div>
-                            <button type="submit" class="btn-login">Entrar</button>
+                            <button type="button" class="btn-login" onclick="fazerLogin()">Entrar</button>
                         </form>
                         <p class="cadastro-link">É novo? <a href="#">Cadastre-se aqui</a></p>
                     </div>
@@ -75,9 +76,23 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 TechCourses. Todos os direitos reservados.</p>
+        <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function fazerLogin() {
+            const email = document.getElementById('login-email').value;
+            const senha = document.getElementById('login-senha').value;
+            
+            if (!email || !senha) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+            
+            setTimeout(() => {
+            window.location.href = 'meus-cursos.html';
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
