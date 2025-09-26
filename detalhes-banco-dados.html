@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Dados SQL - PSITECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <i class="fas fa-laptop-code"></i>
+            <span>PSITECH</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="desempenho.html">Desempenho</a></li>
+                <li><a href="meus-cursos.html">Meus Cursos</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="home-container">
+        <div class="curso-detalhe-container">
+            <div class="curso-detalhe-header">
+                <div class="curso-main-info">
+                    <div class="curso-icon-large">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="curso-title-info">
+                        <h1>Banco de Dados SQL</h1>
+                        <p>Modelagem, SQL avançado, MySQL, PostgreSQL e otimização</p>
+                        <div class="curso-stats">
+                            <span><i class="fas fa-star"></i> 4.6 (1.543 avaliações)</span>
+                            <span><i class="fas fa-users"></i> 1.543 alunos matriculados</span>
+                            <span><i class="fas fa-clock"></i> 45 horas de conteúdo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="curso-purchase-card">
+                    <div class="curso-preco">
+                        <span class="preco-original">R$ 397,00</span>
+                        <span class="preco-promocional">R$ 297,00</span>
+                        <span class="desconto">25% OFF</span>
+                    </div>
+                    <div class="curso-beneficios">
+                        <p><i class="fas fa-check"></i> Acesso vitalício</p>
+                        <p><i class="fas fa-check"></i> Certificado de conclusão</p>
+                        <p><i class="fas fa-check"></i> Suporte do instrutor</p>
+                        <p><i class="fas fa-check"></i> Atualizações gratuitas</p>
+                    </div>
+                    <button class="btn-ver-detalhes" onclick="window.location.href='pagamento.html'">Comprar Agora</button>
+                    <p class="garantia"><i class="fas fa-shield-alt"></i> Garantia de 7 dias</p>
+                </div>
+            </div>
+            <div class="curso-conteudo">
+                <div class="conteudo-tabs">
+                    <button class="tab-btn active" onclick="abrirTab('sobre')">Sobre o Curso</button>
+                    <button class="tab-btn" onclick="abrirTab('conteudo')">Conteúdo</button>
+                    <button class="tab-btn" onclick="abrirTab('instrutor')">Instrutor</button>
+                </div>
+                <div id="sobre" class="tab-content active">
+                    <h3>O que você vai aprender</h3>
+                    <div class="aprendizados">
+                        <div class="aprendizado-item">
+                            <i class="fas fa-check"></i>
+                            <span>Modelagem de dados relacional</span>
+                        </div>
+                        <div class="aprendizado-item">
+                            <i class="fas fa-check"></i>
+                            <span>SQL avançado</span>
+                        </div>
+                        <div class="aprendizado-item">
+                            <i class="fas fa-check"></i>
+                            <span>Otimização de consultas</span>
+                        </div>
+                    </div>
+                    <h3>Para quem é este curso</h3>
+                    <ul>
+                        <li>Iniciantes em banco de dados</li>
+                        <li>Desenvolvedores backend</li>
+                        <li>Profissionais de dados</li>
+                    </ul>
+                </div>
+                <div id="conteudo" class="tab-content">
+                    <div class="modulo">
+                        <h4>Módulo 1: Modelagem de Dados</h4>
+                        <ul>
+                            <li>Entidades e relacionamentos</li>
+                            <li>Normalização</li>
+                            <li>Diagramas ER</li>
+                        </ul>
+                    </div>
+                    <div class="modulo">
+                        <h4>Módulo 2: SQL Avançado</h4>
+                        <ul>
+                            <li>Consultas complexas</li>
+                            <li>Procedures e triggers</li>
+                            <li>Otimização de performance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="instrutor" class="tab-content">
+                    <div class="instrutor-info">
+                        <div class="instrutor-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h4>João Pereira</h4>
+                            <p>Especialista em bancos de dados e SQL</p>
+                            <div class="instrutor-stats">
+                                <span>4.6 ⭐</span>
+                                <span>9.876 alunos</span>
+                                <span>6 cursos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function abrirTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -175,8 +175,7 @@ nav a:hover, nav a.active {
     gap: 0.5rem;
 }
 
-/* Botão padronizado para todos os cursos */
-.btn-ver-curso, .btn-comprar {
+.btn-ver-curso-python, .btn-comprar {
     background-color: #27ae60;
     color: white;
     border: none;
@@ -186,7 +185,7 @@ nav a:hover, nav a.active {
     width: 100%;
     transition: background-color 0.3s;
 }
-.bth-ver-curso-java, .btn-comprar {
+ .bth-ver-curso-java, .btn-comprar {
     background-color: #27ae60;
     color: white;
     border: none;
@@ -197,7 +196,7 @@ nav a:hover, nav a.active {
     transition: background-color 0.3s;
 }
 
-.btn-ver-curso:hover, .btn-comprar:hover {
+.btn-ver-curso-:hover, .btn-comprar:hover {
     background-color: #219a52;
 }
 
