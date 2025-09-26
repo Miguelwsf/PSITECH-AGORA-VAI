@@ -1,3 +1,22 @@
+.btn-ver-curso {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(39,174,96,0.08);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: block;
+    margin-top: 1rem;
+}
+.btn-ver-curso:hover {
+    background-color: #219a52;
+    box-shadow: 0 4px 16px rgba(39,174,96,0.15);
+}
 * {
     margin: 0;
     padding: 0;
@@ -183,8 +202,16 @@ nav a:hover, nav a.active {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(39,174,96,0.08);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
+.btn-ver-curso:hover, .btn-comprar:hover {
+    background-color: #219a52;
+    box-shadow: 0 4px 16px rgba(39,174,96,0.15);
+}
+
  .bth-ver-curso-java, .btn-comprar {
     background-color: #27ae60;
     color: white;
