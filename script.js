@@ -1,16 +1,15 @@
-// script.js - VERSÃO SIMPLIFICADA E CORRIGIDA
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('TechCourses - Frontend carregado!');
+    console.log(' PSITECH - Frontend carregado!');
 
-    // ===== REDIRECIONAMENTOS CORRIGIDOS =====
+   
     
     // Botão "Ver Curso" na HOME
-    const botoesVerCurso = document.querySelectorAll('.btn-ver-curso');
+    const botoesVerCurso = document.querySelectorAll('.btn-ver-curso-python');
     botoesVerCurso.forEach(botao => {
         botao.addEventListener('click', function() {
             // Vai para a página de cursos geral
-            window.location.href = 'cursos.html';
+            window.location.href = 'detalhes-curso.html?curso=python';
         });
     });
 

@@ -175,7 +175,18 @@ nav a:hover, nav a.active {
     gap: 0.5rem;
 }
 
+/* Botão padronizado para todos os cursos */
 .btn-ver-curso, .btn-comprar {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+.bth-ver-curso-java, .btn-comprar {
     background-color: #27ae60;
     color: white;
     border: none;
@@ -1325,4 +1336,18 @@ footer {
     .btn-anterior, .btn-proxima {
         justify-content: center;
     }
+}
+
+/* Logo clicável */
+.logo {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:active {
+    transform: scale(0.95);
 }
