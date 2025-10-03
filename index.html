@@ -27,6 +27,12 @@
     </header>
 
     <main class="home-container">
+    <!-- Banner de destaque -->
+    <section class="banner-destaque">
+        <h1>Transforme sua carreira em TI!</h1>
+        <p>Aprenda com especialistas, conquiste seu certificado e avance no mercado de tecnologia.</p>
+        <a href="cursos.html" class="btn-comprar-agora">Ver Cursos</a>
+    </section>
         <section class="hero">
             <div class="hero-content">
                 <h1>Domine as Tecnologias mais Demandadas do Mercado</h1>
@@ -51,7 +57,7 @@
                         <span><i class="fas fa-clock"></i> 60 horas</span>
                         <span><i class="fas fa-signal"></i> Iniciante ao Avançado</span>
                     </div>
-                    <button class="btn-ver-curso" onclick="window.location.href='detalhes-curso.html?curso=python'">Ver Curso</button>
+                    <button class="btn-ver-curso" onclick="window.location.href='detalhes-python.html'">Ver Curso</button>
                 </div>
 
                 <div class="curso-card">
@@ -65,7 +71,7 @@
                         <span><i class="fas fa-clock"></i> 80 horas</span>
                         <span><i class="fas fa-signal"></i> Intermediário ao Avançado</span>
                     </div>
-                    <button class="btn-ver-curso" onclick="window.location.href='detalhes-curso.html?curso=java'">Ver Curso</button>
+                    <button class="btn-ver-curso" onclick="window.location.href='detalhes-java.html'">Ver Curso</button>
                 </div>
 
                 <div class="curso-card">
@@ -78,7 +84,7 @@
                         <span><i class="fas fa-clock"></i> 45 horas</span>
                         <span><i class="fas fa-signal"></i> Todos os níveis</span>
                     </div>
-                   <button class="btn-ver-curso" onclick="window.location.href='detalhes-curso.html?curso=banco-dados'">Ver Curso</button>
+                   <button class="btn-ver-curso" onclick="window.location.href='detalhes-banco-dados.html'">Ver Curso</button>
                 </div>
             </div>
         </section>
@@ -102,9 +108,43 @@
         </section>
     </main>
 
+    <!-- Depoimentos de alunos -->
+    <section class="depoimentos">
+        <h2>O que nossos alunos dizem</h2>
+        <div class="depoimentos-lista">
+            <div class="depoimento-item">
+                <p>“A plataforma é incrível! Consegui meu primeiro emprego em TI após concluir o curso de Python.”</p>
+                <span>- João Silva</span>
+            </div>
+            <div class="depoimento-item">
+                <p>“Os cursos são muito completos e o suporte dos instrutores faz toda a diferença.”</p>
+                <span>- Maria Oliveira</span>
+            </div>
+            <div class="depoimento-item">
+                <p>“Recomendo para todos que querem aprender tecnologia de verdade!”</p>
+                <span>- Lucas Pereira</span>
+            </div>
+        </div>
+    </section>
     <footer>
-        <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
+        <div class="footer-institucional">
+            <div class="footer-links">
+                <a href="#">Sobre</a> |
+                <a href="#">Termos de Uso</a> |
+                <a href="#">Política de Privacidade</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2024 PSITECH. Todos os direitos reservados.</p>
+        </div>
     </footer>
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5599999999999" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
     <script src="script-extra.js"></script>

@@ -13,14 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Botão "Ver Detalhes" na PÁGINA DE CURSOS
-    const botoesVerDetalhes = document.querySelectorAll('.btn-ver-detalhes');
-    botoesVerDetalhes.forEach(botao => {
-        botao.addEventListener('click', function() {
-            // Vai para a página de detalhes do curso
-            window.location.href = 'detalhes-curso.html';
-        });
-    });
 
     // Botão "Comprar Agora" na PÁGINA DE DETALHES
     const btnComprarCurso = document.getElementById('btn-comprar-curso');
